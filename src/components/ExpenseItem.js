@@ -1,13 +1,14 @@
+import './ExpenseItem.css'
 function ExpenseItem(){
+    const locationOfExpenditure = 'Mumbai';
     return (
-    <>
-    <h1>Expense Item</h1>
-    <ul>
-        <li>food 10</li>
-        <li>petrol 100</li>
-        <li>movie 200</li>
-    </ul>
-    </>
+    <div className='expense-item'>
+        <div>March 21st</div>
+        <div className='expense-item__description'>
+            <h2>Car Insaurance {locationOfExpenditure}</h2>
+            <div className='expense-item__price'>$32</div>
+        </div>
+    </div>
     );
 }
 export default ExpenseItem
