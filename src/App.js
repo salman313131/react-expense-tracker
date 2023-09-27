@@ -2,8 +2,8 @@ import ExpenseItem from './components/ExpenseItem'
 function App() {
   const locationOfExpenditure = 'Mumbai'
   const expenseitemList=[]
-  for(let i=0;i<100;i++){
-    expenseitemList.push(<ExpenseItem locationOfExpenditure={locationOfExpenditure}></ExpenseItem>)
+  for(let i=0;i<5;i++){
+    expenseitemList.push(<ExpenseItem locationOfExpenditure={locationOfExpenditure} date={new Date()}></ExpenseItem>)
   }
   return (
     <div>
