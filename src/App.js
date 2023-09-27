@@ -1,4 +1,4 @@
-import ExpenseItem from './components/ExpenseItem'
+import ExpenseItem from './components/Expenses/ExpenseItem'
 function App() {
   const locationOfExpenditure = 'Mumbai'
   const expenseitemList=[]
