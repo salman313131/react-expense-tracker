@@ -4,11 +4,14 @@ function App() {
   const locationOfExpenditure = 'Mumbai'
   const expenseitemList=[]
   for(let i=0;i<5;i++){
-    expenseitemList.push(<ExpenseItem locationOfExpenditure={locationOfExpenditure} date={new Date()}></ExpenseItem>)
+    expenseitemList.push(<ExpenseItem id={i} locationOfExpenditure={locationOfExpenditure} date={new Date()}></ExpenseItem>)
+  }
+  const addExpenseHandler=(expense)=>{
+    console.log(expense)
   }
   return (
     <div>
-      <NewExpense></NewExpense>
+      <NewExpense onAddExpense={addExpenseHandler}></NewExpense>
       {expenseitemList}
     </div>
   );
