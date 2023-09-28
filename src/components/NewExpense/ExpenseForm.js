@@ -4,20 +4,28 @@ const ExpenseForm=()=>{
     const [enteredTitle,updateEnteredTitle]=useState('')
     const [enteredAmount,updateEnteredAmount]=useState('')
     const [enteredDate,updateEnteredDate]=useState('')
+    // const [userInput,setUser] = useState({
+    //     enteredTitle:'',enteredAmount:'',enteredDate=''
+    // })
     const titleChangeHandler=(e)=>{
         updateEnteredTitle(e.target.value)
-        console.log(e.target.value)
+        // setUser((prevState=>{
+        //     return {...prevState,enteredTitle:e.target.value}
+        // }))
     }
     const amountChangeHandler=(e)=>{
         updateEnteredAmount(e.target.value)
-        console.log(e.target.value)
     }
     const dateChangeHandler=(e)=>{
         updateEnteredDate(e.target.value)
-        console.log(e.target.value)
+    }
+    const formSubmit=(e)=>{
+        e.preventDefault()
+        const data={title:enteredTitle,amount:enteredAmount,date:enteredDate}
+        console.log(data)
     }
     return(
-        <form>
+        <form onSubmit={formSubmit}>
             <div className='new-expense__controls'>
                 <div className='new-expense__control'>
                     <label>Title</label>
