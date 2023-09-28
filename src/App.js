@@ -1,4 +1,5 @@
 import ExpenseItem from './components/Expenses/ExpenseItem'
+import NewExpense from './components/NewExpense/NewExpense'
 function App() {
   const locationOfExpenditure = 'Mumbai'
   const expenseitemList=[]
@@ -7,7 +8,7 @@ function App() {
   }
   return (
     <div>
-      <h1>Let's get started</h1>
+      <NewExpense></NewExpense>
       {expenseitemList}
     </div>
   );
